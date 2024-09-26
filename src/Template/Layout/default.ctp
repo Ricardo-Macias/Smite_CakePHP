@@ -27,15 +27,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('bootstrap.min') ?>
-    <?= $this->Html->script(['bootstrap.min','jquery-3.7.1.min', 'bootstrap.bundle']) ?> <!--El bootstrap.bundle  -->
+    <?= $this->Html->css(['bootstrap.min', 'custom']) ?>
+    <?= $this->Html->script(['bootstrap.min','jquery-3.7.1.min', 'bootstrap.bundle']) ?> <!--El bootstrap.bundle arregla lo del menu desplegable -->
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Smite</a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
@@ -44,12 +44,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Aprendiendo
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Conoce las clases</a></li>
+                            <li><a class="dropdown-item" href="#">Domina los conceptos basicos</a></li>
+                            <li><a class="dropdown-item" href="#">Explora los modos de juego</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Modos de Juegos</a>
                     </li>
                 </ul>
             </div>
