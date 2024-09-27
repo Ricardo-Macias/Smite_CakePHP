@@ -27,22 +27,55 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['bootstrap.min', 'custom']) ?>
+    <?= $this->Html->css(['bootstrap.min']) ?>
     <?= $this->Html->script(['bootstrap.min','jquery-3.7.1.min', 'bootstrap.bundle']) ?> <!--El bootstrap.bundle arregla lo del menu desplegable -->
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <style>
+        body{
+            background-color: #071325;
+            font-family: roboto, sans-serif;
+            text-transform: inherit;
+        }
+
+        .navbar, .dropdown-menu {
+            background-color: #05111e;
+        }
+
+        .navbar a{
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+            color: #85784a;
+            border-bottom: 4px solid #85784a;
+        }
+
+        .nav-link:hover, .dropdown-item:hover{
+            background-color: #05111e;
+            color: #85784a;
+            border-bottom: 4px solid #85784a;
+        }
+    </style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Smite</a> 
+            <a class="navbar-brand" href="#">
+                <img src="webroot/img/smite.png" alt="Smite" width="85" height="30">
+            </a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Aprendiendo
@@ -54,7 +87,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Modos de Juegos</a>
+                        <a class="nav-link" href="#">Modos de juego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dioses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Items</a>
                     </li>
                 </ul>
             </div>
