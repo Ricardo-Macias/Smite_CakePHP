@@ -65,9 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="webroot/img/smite.png" alt="Smite" width="85" height="30">
-            </a> 
+            <?= $this->Html->link('<img src="webroot/img/smite.png" alt="Smite" width="85" height="30">',['controller'=>'Inicio','action'=>'index'],['escape' => false,'class' => 'navbar-brand']) ?>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -76,6 +74,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li class="nav-item">
                         <a class="nav-link" href="#">Noticias</a>
                     </li>
+                    <li class="nav-item">
+                        <?= $this->Html->link('Aprendiendo', ['controller' => 'Aprendiendo', 'action' => 'index'], ['escape' =>false,'class' => 'nav-link']) ?>
+                    </li>
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Aprendiendo
@@ -86,6 +88,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             <li><a class="dropdown-item" href="#">Explora los modos de juego</a></li>
                         </ul>
                     </li>
+                    -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Modos de juego</a>
                     </li>
